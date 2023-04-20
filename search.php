@@ -10,7 +10,8 @@ require_once("models.php");
  * @var array $connect
  */
 $categories = get_categories($connect);
-$search = null;
+$search = $_GET["search"];
+
 if(isset($search)) {
     $search = htmlspecialchars($_GET["search"]);
 }

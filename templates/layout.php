@@ -5,7 +5,7 @@
  * @var array $categories
  * @var array $content
  **/
-
+$search = '';
 ?>
 
 <!DOCTYPE html>

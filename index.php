@@ -11,6 +11,7 @@ require_once("getwinner.php");
  * @var string $connect ;
  **/
 
+$search = null;
 $categories = get_categories($connect);
 
 $sql = get_query_list_lots('2022-07-12');
@@ -48,6 +49,7 @@ $layout_content = include_template("layout.php", [
     "content" => $page_content,
     "categories" => $categories,
     "title" => "Главная",
+    "search" => $search,
     "is_auth" => $is_auth,
     "user_name" => $user_name
 ]);

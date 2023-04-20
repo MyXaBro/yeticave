@@ -1,6 +1,6 @@
 <?php
 
-function format_price($price): string
+function format_price($price)
 {
     $price = ceil($price);
     if($price >= 1000){
@@ -12,7 +12,7 @@ function format_price($price): string
 
 
 
-function time_counter($date): array
+function time_counter($date)
 {
 
     date_default_timezone_set('Europe/Moscow');

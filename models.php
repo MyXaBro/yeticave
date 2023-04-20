@@ -286,7 +286,6 @@ function get_lot_date_finish ($connect) {
 function get_last_bet ($connect, $id) {
     if (!$connect) {
         $error = mysqli_connect_error();
-        return $error;
     } else {
         $sql = "SELECT * FROM bets
         where lot_id = $id
@@ -297,8 +296,8 @@ function get_last_bet ($connect, $id) {
             return $bet;
         }
         $error = mysqli_error($connect);
-        return $error;
     }
+    return $error;
 }
 
 /**

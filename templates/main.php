@@ -7,9 +7,22 @@
             <?php
             /**
             * @var array $categories
+             * @var array $lot
              **/
+
+            $class_names = [
+                1 => 'promo__item--boards',
+                2 => 'promo__item--attachment',
+                3 => 'promo__item--boots',
+                4 => 'promo__item--clothing',
+                5 => 'promo__item--tools'
+            ];
             foreach ($categories as $key => $category):?>
-            <li class="promo__item promo__item--boards">
+                <?php
+                $category_id = $category['id'];
+                $class_name = $class_names[$category_id];
+                ?>
+            <li class="promo__item <?=$class_name;?>">
                 <a class="promo__link" href="/pages/all-lots.html"><?=$category['name_category'];?></a>
             </li>
             <?php endforeach;?>

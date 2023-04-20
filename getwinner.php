@@ -41,9 +41,6 @@ foreach($lots as $lot){
             $recipients[$user_date["email"]] = $user_date["user_name"];
         }
 
-        /**
-         * @var class Swift_SmtpTransport Отправляет сообщение по протоколу smtp
-         */
         $transport = new Swift_SmtpTransport("smtp.mail.ru", 465);
         $transport -> setUsername("rulez695@mail.ru");
         $transport -> setPassword("2LSBZdPMjDcY5YGDyFZq");
